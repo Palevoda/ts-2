@@ -1,4 +1,28 @@
 // import { Queue } from "queue-typescript";
+import { getEnvironmentData } from "worker_threads";
+
+let a_unknown: unknown;
+let a_any: any;
+
+a_any = 1;
+a_unknown = '';
+
+let aaa = 1;
+aaa = a_any;
+// aaa = a_unknown;
+
+
+//
+let a: string | number;
+a = 1;
+a = '1';
+
+
+//never
+function fail(message: string): never {
+	throw new Error(message);
+}
+
 
 let message: string = "moloko";
 
@@ -75,9 +99,9 @@ moloko = value as string;
 moloko = <string>value; 
 
 
-developerName = "Palevoda";
+// developerName = "Palevoda";
 
-console.log(developerName);
+// console.log(developerName);
 
 
 
